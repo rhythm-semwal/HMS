@@ -1,0 +1,9 @@
+{
+  "database": "database.db",
+  "port": 5000,
+  "host": "127.0.0.1",
+  "pagination": {
+    "default_limit": 10,
+    "max_limit": 100
+  }
+}
