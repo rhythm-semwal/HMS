@@ -68,6 +68,7 @@ class Patients(Resource):
 
             return {'status': 'success', 'message': 'Patient Record created successfully', 'pat_id': pat_id}, 201
         except Exception as e:
+            conn.rollback()
             return {'status': 'error', 'message': str(e)}, 500
 
     def get_with_filters(self, filter_criteria):
@@ -137,4 +138,5 @@ class Patient(Resource):
 
             return {'status': 'success', 'message': 'Patient Record updated successfully'}
         except Exception as e:
+            conn.rollback()
             return {'status': 'error', 'message': str(e)}, 500
