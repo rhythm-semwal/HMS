@@ -1,5 +1,4 @@
-from flask import Flask, send_from_directory, render_template, jsonify, request
-from flask import send_from_directory
+from flask import Flask, request
 
 from flask_restful import Resource, Api
 from package.patient import Patients, Patient
@@ -9,7 +8,6 @@ from package.department import Departments, Department
 from package.prescribes import Prescribes, Prescribe
 
 import json
-import os
 
 with open('config.json') as data_file:
     config = json.load(data_file)
