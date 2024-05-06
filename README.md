@@ -17,6 +17,7 @@ Functional Requirements
     b. Assign Doctors to Departments 
     
 4. Search Functionality: 
-    a. Search for Patients, Doctors, and Departments by some attribute ● Filtering Options (e.g., Availability and Specialization) 
-    b. Optional Enhancements: Implement pagination to limit the number of products returned in a single request. 
+    a. Search for Patients, Doctors, and Departments by some attribute 
+    b. Filtering Options (e.g., Availability and Specialization)
+    c. Optional Enhancements: Implement pagination to limit the number of products returned in a single request. 
 ```
