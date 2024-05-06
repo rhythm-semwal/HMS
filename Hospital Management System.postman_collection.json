@@ -1,0 +1,655 @@
+{
+	"info": {
+		"_postman_id": "e29246bc-cc04-4fb5-a736-572c4ea4b989",
+		"name": "Hospital Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5184356"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "List All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pat_first_name\": \"prakash\",\n    \"pat_last_name\": \"semwal\",\n    \"pat_insurance_no\": 333,\n    \"pat_ph_no\": 9999999999,\n    \"pat_address\": \"home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Patient By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/patient/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pat_first_name\": \"prakash\",\n    \"pat_last_name\": \"semwal\",\n    \"pat_insurance_no\": 321,\n    \"pat_ph_no\": 9999999999,\n    \"pat_address\": \"dehradun\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/patient/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/patient/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Patient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/patient/search?pat_address=home",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"search"
+							],
+							"query": [
+								{
+									"key": "pat_address",
+									"value": "home"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "List All Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doc_first_name\": \"abhishek\",\n    \"doc_last_name\": \"k\",\n    \"doc_ph_no\": 7065206719,\n    \"doc_address\": \"home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Doctor By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/doctor/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doc_first_name\": \"kumar rhythm\",\n    \"doc_last_name\": \"samual\",\n    \"doc_ph_no\": 7065206719,\n    \"doc_address\": \"home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/doctor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/doctor/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/doctor/search?doc_first_name=abhishek&doc_ph_no=7065206719&limit=10&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"search"
+							],
+							"query": [
+								{
+									"key": "doc_first_name",
+									"value": "abhishek"
+								},
+								{
+									"key": "doc_ph_no",
+									"value": "7065206719"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "List All Dept",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/department",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dept",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"department_name\": \"childcare\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/department",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dept",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"department_name\": \"cardiology and ENT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/department/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Doctor to Dept",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"doctor_ids\": [1,2,3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/department/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Dept By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/department/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/department/search?department_name=childcare&limit=1&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"department",
+								"search"
+							],
+							"query": [
+								{
+									"key": "department_name",
+									"value": "childcare"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "List All Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pat_id\": 2,\n    \"doc_id\": 1,\n    \"appointment_date\":\"08-05-2024\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Appointment By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/appointment/5",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"appointment",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"pat_id\": 1,\n        \"doc_id\": 2,\n        \"appointment_date\": \"08-05-2024\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/appointment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"appointment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescribe",
+			"item": [
+				{
+					"name": "List All Prescribes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/prescribe",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"prescribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Prescription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doc_id\": 1,\n    \"pat_id\": 2,\n    \"p_date\": \"06-05-2024\",\n    \"app_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/prescribe",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"prescribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Of Patients Assigned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/prescribe/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"prescribe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		}
+	]
+}
